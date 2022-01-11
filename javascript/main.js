@@ -4,7 +4,7 @@ let spans = document.querySelectorAll(".container form .addedContent span.check"
 spans.forEach((ele) => {
     ele.addEventListener("click", function(e) {
         if(id == e.currentTarget.parentElement.id) {
-            let src  = "/images/icon-check.svg";
+            let src  = "images/icon-check.svg";
             ele.classList.toggle("click");
             if(ele.classList.contains("click")) {
                 ele.innerHTML = `<img src=${src} alt="icon"/>`;
@@ -121,7 +121,7 @@ function addItmenTodo(value, id) {
     let box = document.querySelector(".container form .addedContent").cloneNode(true);
     let img  = document.createElement("img");
     let para = document.createElement("p");
-    img.src = ["/images/icon-cross.svg"];
+    img.src = ["images/icon-cross.svg"];
     img.setAttribute("alt","iconDel");
     box.classList.add("itemList");
     box.setAttribute("id",id);
@@ -157,7 +157,7 @@ document.querySelector(".container .header img").addEventListener("click", funct
     if(!box.children[1].classList.contains("dark")) {
         box.classList.add("dark");
         box.children[1].classList.add("dark");
-        box.children[1].src = "/images/icon-sun.svg";
+        box.children[1].src = "images/icon-sun.svg";
         document.body.style.setProperty("--Very-Light-Gray", "hsl(235, 24%, 19%)");
         document.body.style.setProperty("--Very-Dark-Grayish-Blue", "hsl(236, 33%, 92%)");
         document.body.style.setProperty("--Very-Light-Grayish-Blue", "hsl(235, 21%, 11%)");
@@ -172,7 +172,7 @@ document.querySelector(".container .header img").addEventListener("click", funct
     } else {
         box.classList.remove("dark");
         box.children[1].classList.remove("dark");
-        box.children[1].src = "/images/icon-moon.svg";
+        box.children[1].src = "images/icon-moon.svg";
         document.body.style.setProperty("--Very-Light-Gray", "hsl(0, 0%, 98%)");
         document.body.style.setProperty("--Very-Dark-Grayish-Blue", "hsl(235, 19%, 35%)");
         document.body.style.setProperty("--Very-Light-Grayish-Blue", "hsl(236, 33%, 92%)");
