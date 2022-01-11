@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="descrption" content="the js & Html & Css challenge">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&family=Josefin+Sans:wght@400;700&family=Red+Hat+Display:wght@500;700;900&family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Todo app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    * {
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0%;
+    }
+    :root {
+      --Very-Light-Gray: hsl(0, 0%, 98%);
+      --Very-Light-Grayish-Blue: hsl(236, 33%, 92%);
+      --Light-Grayish-Blue: hsl(233, 11%, 84%);
+      --Dark-Grayish-Blue: hsl(236, 9%, 61%);
+      --Very-Dark-Grayish-Blue: hsl(235, 19%, 35%);
+      --Bright-Blue: hsl(220, 98%, 61%);
+      --width:  calc(100% - 90px);
+      /* --linear-gradient: hsl(192, 100%, 67%) to hsl(280, 87%, 65%) */
+      /* --Very-Dark-Blue: hsl(235, 21%, 11%); */
+      /* --Very-Dark-Desaturated-Blue: hsl(235, 24%, 19%); */
+      --Light-Grayish-Blue: hsl(234, 39%, 85%);
+      --Light-Grayish-Blue: hsl(236, 33%, 92%); /*(hover)*/
+      --Dark-Grayish-Blue: hsl(234, 11%, 52%);
+      --Very-Dark-Grayish-Blue: hsl(233, 14%, 35%);
+      --Very-Dark-Grayish-Blue: hsl(237, 14%, 26%);
+    }
+    @media (min-width:768px) {
+      .container {
+        width: 357px;
+      }
+    }
+    @media (min-width:1200px) {
+      .container {
+        width: 1440px;
+      }
+    }
+    ul {
+      list-style: none;
+    }
+    body {
+      background-color: var(--Very-Light-Grayish-Blue);
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+      font-family: 'Josefin Sans', sans-serif;
+    }
+    .container  {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+    @media (max-width:768px) {
+      .container {
+        width: 100%;
+      }
+    }
+    .container .header {
+      width: 100%;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      background-image: url(/images/bg-desktop-light.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 230px;
+      color: #fff;
+      position: relative;
+    }
+    .container .header.dark { 
+      background-image: url(/images/bg-desktop-dark.jpg);
+    }
+    @media (max-width:768px) {
+      .container .header {
+        background-image: url(/images/bg-mobile-light.jpg);
+      }
+      .container .header.dark {
+        background-image: url(/images/bg-mobile-dark.jpg);
+      }
+    }
+    .container .header h1 {
+      text-transform: uppercase;
+      position: absolute;
+      left: 30%;
+      top: 62px;
+    }
+    .container .header img {
+      position: absolute;
+      right: 30%;
+      top: 65px;
+      cursor: pointer;
+    }
+    .container form {
+      width: 38.893%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      position: relative;
+    }
+    @media (max-width:992px) {
+      .container form {
+        width: 90%;
+      }
+      .container .header h1 {
+        left: 5%;
+      }
+      .container .header img {
+        right: 5%;
+      }
+    }
+    .container form .addedContent {
+      width: 100%;
+      position: absolute;
+      top: -100px;
+    }
+    .container form .addedContent {
+      width: 100%;
+    }
+    .container form .addedContent input[type="text"],
+    .container form .listItems .addedContent.itemList p  {
+      width: 100%;
+      border: 2px solid var(--Very-Light-Grayish-Blue);
+      outline: none;
+      padding: 14px 50px;
+      border-radius: 5px;
+      background-color: var(--Very-Light-Gray);
+      caret-color: var(--Dark-Grayish-Blue);
+      font-size: 18px;
+      font-family: 'Josefin Sans', sans-serif;
+    }
+    @media (max-width:768px) {
+      .container form .addedContent input[type="text"],
+      .container form .listItems .addedContent.itemList p  {
+        font-size: 13px;
+      }
+    }
+    .container form .addedContent input[type="text"].dark {
+      border: 2px solid var(--Very-Light-Gray);
+      color: #fff;
+    }
+    .container form .addedContent span {
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      border: 2px solid var(--Very-Light-Grayish-Blue);
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .container form .addedContent span.dark {
+      border: 2px solid var(--Dark-Grayish-Blue);
+    }
+    .container form .addedContent span:hover {
+      background: linear-gradient(var(--Very-Light-Gray),var(--Very-Light-Gray)) padding-box,linear-gradient(hsl(192, 100%, 67%) , hsl(280, 87%, 65%)) border-box;
+      border: 2px solid transparent;
+    }
+    .container form .addedContent span.click {
+      background: linear-gradient(hsl(192, 100%, 67%) , hsl(280, 87%, 65%));
+      border: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .container form .addedContent {
+      width: 100%;
+    }
+    .container form .listItems {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: var(--Very-Light-Gray);
+      border-radius: 5px;
+      position: relative;
+      top: -30px;
+      box-shadow: 0px 30px 80px -50px #111;
+    }
+    .container form .listItems .addedContent.itemList {
+      position: relative;
+      top: 0%;
+      transition: 0.3s;
+      border-top: 2px solid var(--Very-Light-Grayish-Blue);
+    }
+    .container form .listItems .addedContent.itemList.dark {
+      border-top: 1px solid var(--Dark-Grayish-Blue);
+    }
+    .container form .listItems .addedContent.itemList.hidden {
+      transform: rotateX(90deg);
+    }
+    .container form .listItems .addedContent.itemList > img {
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      display: none;
+      transition: 00.3s;
+      cursor: pointer;
+    }
+    .container form .listItems .addedContent.itemList:hover img {
+      display: block;
+    }
+    .container form .listItems .addedContent.itemList p {
+      border: none;
+      border-radius: 0;
+      width: -webkit-fit-content;
+      width: -moz-fit-content;
+      width: fit-content;
+      color: var(--dark-para-color);
+    }
+    .container form .listItems .addedContent.itemList p.active-item {
+      color: var(--Light-Grayish-Blue);
+      position: relative;
+      transition: 00.3s;
+    }
+    .container form .listItems .addedContent.itemList p.active-item::before {
+      position: absolute;
+      content: "";
+      top: 50%;
+      left: 47px;
+      transform: translateY(-50%);
+      width:  var(--width);
+      height: 2px;
+      background-color: var(--Light-Grayish-Blue);
+    }
+    .container form .listItems .addedContent.itemList:first-of-type ,
+    .container form .listItems .addedContent.itemList:first-of-type p {
+      border-radius: 5px 5px 0px 0px;
+      border: 0px;
+    }
+    .container form .listItems .footList {
+      width: 100%;
+      padding: 0px 20px;
+      border-top: 2px solid var(--Very-Light-Grayish-Blue);
+    }
+    .container form .listItems .footList.dark {
+      border-top: 1px solid var(--Dark-Grayish-Blue);
+    }
+    .container form .listItems .footList > ul.inforList {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 0px;
+    }
+    .container form .listItems .footList > ul.inforList > li:not(.list-child) {
+      color: var(--Dark-Grayish-Blue);
+      transition: 0.5s;
+      cursor: pointer;
+    }
+    .container form .listItems .footList > ul.inforList > li.list-child {
+      width: calc(100% / 3);
+    }
+    .container form .listItems .footList > ul.inforList > li.list-child ul {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    @media (max-width:1160px) {
+      .container form .listItems .footList > ul.inforList > li.list-child ul {
+        position: absolute;
+        bottom: -60px;
+        left: 0;
+        background-color: var(--Very-Light-Gray);
+        padding: 15px 60px;
+        border-radius: 5px;
+    }
+    }
+    .container form .listItems .footList > ul.inforList > li.list-child ul > li {
+      color: var(--Dark-Grayish-Blue);
+      font-weight: bold;
+      transition: 0.5s;
+      cursor: pointer;
+      padding-left: 10px;
+    }
+    @media (max-width:1200px) {
+      .container form .listItems .footList > ul.inforList > li.list-child ul > li {
+        padding-left: 5px;
+      }
+    }
+    .container form .listItems .footList > ul.inforList > li.list-child ul > li:not(.active):hover,
+    .container form .listItems .footList > ul.inforList > li:hover {
+      color: var(--Very-Dark-Grayish-Blue);
+    }
+    .container form .listItems .footList > ul.inforList > li.list-child ul > li.active {
+      color: var(--Bright-Blue);
+    }
+    .container .foot {
+      padding: 30px;
+      color: var(--Dark-Grayish-Blue);
+      position: relative;
+    }
+    @media (max-width:1160px) {
+      .container .foot {
+        bottom: -30px;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1>Todo</h1>
+    <img src="images/icon-moon.svg" alt="icon">
+  </div>
+  <form>
+    <div class="addedContent" id="0">
+      <input type="text" name="txt" id="txtTodo" aria-label="">
+      <span class="check"></span>
+      <label for="txtTodo"></label>
+    </div>
+    <div class="listItems">
+    <div class="addedContent itemList" id="6">
+        <p class="active-item">Complete online JavaSCript course</p>
+        <span class="check click"><img src="../images/icon-check.svg" alt="icon"></span>
+        <img src="../images/icon-cross.svg">
+    </div>
+    <div class="addedContent itemList" id="5">
+      <p>Jog around the park 3x</p>
+      <span class="check"></span>
+      <img src="../images/icon-cross.svg">
+    </div>
+    <div class="addedContent itemList" id="4">
+      <p>10 mintes meditation</p>
+      <span class="check"></span>
+      <img src="../images/icon-cross.svg">
+    </div>
+    <div class="addedContent itemList" id="3">
+      <p>Read for 1 hour</p>
+      <span class="check"></span>
+      <img src="../images/icon-cross.svg">
+    </div>
+    <div class="addedContent itemList" id="2">
+      <p>Pick up groceries</p>
+      <span class="check"></span>
+      <img src="../images/icon-cross.svg">
+    </div>
+    <div class="addedContent itemList" id="1">
+      <p>Complete Todo App on Frontend Mentor</p>
+      <span class="check"></span>
+      <img src="../images/icon-cross.svg">
+    </div>
+      <div class="footList">
+        <ul class="inforList">
+          <li><span class="numElem">0</span> items left</li>
+          <li class="list-child">
+            <ul class="listchose">
+              <li class="active" data-text="All">All</li>
+              <li data-text="Active">Active</li>
+              <li data-text="Completed">Completed</li>
+            </ul>
+          </li>
+          <li class="delete">Clear Completed</li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot">
+      Drag and drop to reorder list
+    </div>
+  </form>
+</div>
+  
+<script src="javascript/main.js"></script>
+  <!-- Add dynamic number --> 
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+</body>
+</html>
