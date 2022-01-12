@@ -25,7 +25,6 @@
       --Dark-Grayish-Blue: hsl(236, 9%, 61%);
       --Very-Dark-Grayish-Blue: hsl(235, 19%, 35%);
       --Bright-Blue: hsl(220, 98%, 61%);
-      --width:  calc(100% - 90px);
       /* --linear-gradient: hsl(192, 100%, 67%) to hsl(280, 87%, 65%) */
       /* --Very-Dark-Blue: hsl(235, 21%, 11%); */
       /* --Very-Dark-Desaturated-Blue: hsl(235, 24%, 19%); */
@@ -94,17 +93,17 @@
       text-transform: uppercase;
       position: absolute;
       left: 31%;
-      top: 69px;
-      letter-spacing: 15px;
+      top: 80px;
+      letter-spacing: 20px;
     }
     .container .header img {
       position: absolute;
       right: 31%;
-      top: 69px;
+      top: 80px;
       cursor: pointer;
     }
     .container form {
-      width: 39%;
+      width: 36.43%;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -135,7 +134,7 @@
       width: 100%;
       border: 2px solid var(--Very-Light-Grayish-Blue);
       outline: none;
-      padding: 20px 50px;
+      padding: 20px 72px;
       border-radius: 5px;
       background-color: var(--Very-Light-Gray);
       caret-color: var(--Dark-Grayish-Blue);
@@ -154,11 +153,11 @@
     }
     .container form .addedContent span {
       position: absolute;
-      left: 20px;
+      left: 23px;
       top: 50%;
       transform: translateY(-50%);
-      width: 20px;
-      height: 20px;
+      width: 22px;
+      height: 22px;
       border-radius: 50%;
       border: 2px solid var(--Very-Light-Grayish-Blue);
       cursor: pointer;
@@ -223,6 +222,8 @@
       width: -moz-fit-content;
       width: fit-content;
       color: var(--dark-para-color);
+      padding-block: 22px;
+      padding-left: 72px;
     }
     .container form .listItems .addedContent.itemList p.active-item {
       color: var(--Light-Grayish-Blue);
@@ -233,9 +234,9 @@
       position: absolute;
       content: "";
       top: 50%;
-      left: 47px;
+      left: 71px;
       transform: translateY(-50%);
-      width:  var(--width);
+      width: calc(100% - 140px);
       height: 2px;
       background-color: var(--Light-Grayish-Blue);
     }
@@ -246,7 +247,7 @@
     }
     .container form .listItems .footList {
       width: 100%;
-      padding: 1px 20px;
+      padding: 2px 22px;
       border-top: 2px solid var(--Very-Light-Grayish-Blue);
     }
     .container form .listItems .footList.dark {
@@ -316,48 +317,48 @@
 </head>
 <body>
 <div class="container">
-  <div class="header">
+  <div class="header dark">
     <h1>Todo</h1>
-    <img src="images/icon-moon.svg" alt="icon">
+    <img src="images/icon-moon.svg" alt="icon" class="dark">
   </div>
   <form>
     <div class="addedContent" id="0">
-      <input type="text" name="txt" id="txtTodo" aria-label="">
+      <input type="text" class="dark" name="txt" id="txtTodo" aria-label="" placeholder="Create a new todo...">
       <span class="check"></span>
       <label for="txtTodo"></label>
     </div>
     <div class="listItems">
     <div class="addedContent itemList" id="6">
         <p class="active-item">Complete online JavaSCript course</p>
-        <span class="check click"><img src="images/icon-check.svg" alt="icon"></span>
+        <span class="check click dark"><img src="images/icon-check.svg" alt="icon"></span>
         <img src="images/icon-cross.svg">
     </div>
-    <div class="addedContent itemList" id="5">
+    <div class="addedContent itemList dark" id="5">
       <p>Jog around the park 3x</p>
-      <span class="check"></span>
+      <span class="check dark"></span>
       <img src="images/icon-cross.svg">
     </div>
-    <div class="addedContent itemList" id="4">
+    <div class="addedContent itemList dark" id="4">
       <p>10 mintes meditation</p>
-      <span class="check"></span>
+      <span class="check dark"></span>
       <img src="images/icon-cross.svg">
     </div>
-    <div class="addedContent itemList" id="3">
+    <div class="addedContent itemList dark" id="3">
       <p>Read for 1 hour</p>
-      <span class="check"></span>
+      <span class="check dark"></span>
       <img src="images/icon-cross.svg">
     </div>
-    <div class="addedContent itemList" id="2">
+    <div class="addedContent itemList dark" id="2">
       <p>Pick up groceries</p>
-      <span class="check"></span>
+      <span class="check dark"></span>
       <img src="images/icon-cross.svg">
     </div>
-    <div class="addedContent itemList" id="1">
+    <div class="addedContent itemList dark" id="1">
       <p>Complete Todo App on Frontend Mentor</p>
-      <span class="check"></span>
+      <span class="check dark"></span>
       <img src="images/icon-cross.svg">
     </div>
-      <div class="footList">
+      <div class="footList dark">
         <ul class="inforList">
           <li><span class="numElem">0</span> items left</li>
           <li class="list-child">
