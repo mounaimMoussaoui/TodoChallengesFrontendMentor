@@ -186,3 +186,9 @@ document.querySelector(".container .header img").addEventListener("click", funct
         document.querySelector(".container form .listItems .footList").classList.remove("dark");
     }
 });
+
+
+// delegation in javscript
+// document.addEventListener("click", function(event) {
+//     console.log(event);
+// });
