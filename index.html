@@ -19,20 +19,13 @@
       padding: 0%;
     }
     :root {
-      --Very-Light-Gray: hsl(0, 0%, 98%);
-      --Very-Light-Grayish-Blue: hsl(236, 33%, 92%);
+      --Very-Light-Gray: hsl(235, 24%, 19%);
+      --Very-Light-Grayish-Blue: hsl(235, 21%, 11%);
       --Light-Grayish-Blue: hsl(233, 11%, 84%);
-      --Dark-Grayish-Blue: hsl(236, 9%, 61%);
-      --Very-Dark-Grayish-Blue: hsl(235, 19%, 35%);
-      --Bright-Blue: hsl(220, 98%, 61%);
-      /* --linear-gradient: hsl(192, 100%, 67%) to hsl(280, 87%, 65%) */
-      /* --Very-Dark-Blue: hsl(235, 21%, 11%); */
-      /* --Very-Dark-Desaturated-Blue: hsl(235, 24%, 19%); */
-      --Light-Grayish-Blue: hsl(234, 39%, 85%);
-      --Light-Grayish-Blue: hsl(236, 33%, 92%); /*(hover)*/
       --Dark-Grayish-Blue: hsl(234, 11%, 52%);
-      --Very-Dark-Grayish-Blue: hsl(233, 14%, 35%);
-      --Very-Dark-Grayish-Blue: hsl(237, 14%, 26%);
+      --Very-Dark-Grayish-Blue: hsl(236, 33%, 92%);
+      --Bright-Blue: hsl(220, 98%, 61%);
+      --dark-para-color: white;
     }
     @media (min-width:768px) {
       .container {
@@ -48,13 +41,13 @@
       list-style: none;
     }
     body {
-      background-color: var(--Very-Light-Grayish-Blue);
       -webkit-user-select: none;
       -moz-user-select: none;
       user-select: none;
       font-family: 'Josefin Sans', sans-serif;
     }
     .container  {
+      background-color: var(--Very-Light-Grayish-Blue);
       width: 100%;
       display: flex;
       justify-content: center;
@@ -94,7 +87,8 @@
       position: absolute;
       left: 31%;
       top: 80px;
-      letter-spacing: 20px;
+      letter-spacing: 15px;
+      font-size: 35px;
     }
     .container .header img {
       position: absolute;
@@ -103,7 +97,7 @@
       cursor: pointer;
     }
     .container form {
-      width: 36.43%;
+      width: 37.5%;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -134,7 +128,7 @@
       width: 100%;
       border: 2px solid var(--Very-Light-Grayish-Blue);
       outline: none;
-      padding: 20px 72px;
+      padding: 21px 72px;
       border-radius: 5px;
       background-color: var(--Very-Light-Gray);
       caret-color: var(--Dark-Grayish-Blue);
@@ -188,7 +182,7 @@
       background-color: var(--Very-Light-Gray);
       border-radius: 5px;
       position: relative;
-      top: -50px;
+      top: -55px;
       box-shadow: 0px 30px 80px -50px #111;
     }
     .container form .listItems .addedContent.itemList {
@@ -222,7 +216,7 @@
       width: -moz-fit-content;
       width: fit-content;
       color: var(--dark-para-color);
-      padding-block: 22px;
+      padding-block: 23px;
       padding-left: 72px;
     }
     .container form .listItems .addedContent.itemList p.active-item {
@@ -304,7 +298,7 @@
       color: var(--Bright-Blue);
     }
     .container .foot {
-      padding: 20px 0px 30px;
+      padding: 0px 0px 50px;
       color: var(--Dark-Grayish-Blue);
       position: relative;
     }
@@ -319,44 +313,44 @@
 <div class="container">
   <div class="header dark">
     <h1>Todo</h1>
-    <img src="images/icon-moon.svg" alt="icon" class="dark">
+    <img src="images/icon-sun.svg" alt="icon" class="dark">
   </div>
   <form>
     <div class="addedContent" id="0">
       <input type="text" class="dark" name="txt" id="txtTodo" aria-label="" placeholder="Create a new todo...">
-      <span class="check"></span>
+      <span class="check dark"></span>
       <label for="txtTodo"></label>
     </div>
     <div class="listItems">
     <div class="addedContent itemList" id="6">
         <p class="active-item">Complete online JavaSCript course</p>
         <span class="check click dark"><img src="images/icon-check.svg" alt="icon"></span>
-        <img src="images/icon-cross.svg">
+        <img src="images/icon-cross.svg" alt="icon">
     </div>
     <div class="addedContent itemList dark" id="5">
       <p>Jog around the park 3x</p>
       <span class="check dark"></span>
-      <img src="images/icon-cross.svg">
+      <img src="images/icon-cross.svg" alt="icon">
     </div>
     <div class="addedContent itemList dark" id="4">
       <p>10 mintes meditation</p>
       <span class="check dark"></span>
-      <img src="images/icon-cross.svg">
+      <img src="images/icon-cross.svg" alt="icon">
     </div>
     <div class="addedContent itemList dark" id="3">
       <p>Read for 1 hour</p>
       <span class="check dark"></span>
-      <img src="images/icon-cross.svg">
+      <img src="images/icon-cross.svg" alt="icon">
     </div>
     <div class="addedContent itemList dark" id="2">
       <p>Pick up groceries</p>
       <span class="check dark"></span>
-      <img src="images/icon-cross.svg">
+      <img src="images/icon-cross.svg" alt="icon">
     </div>
     <div class="addedContent itemList dark" id="1">
       <p>Complete Todo App on Frontend Mentor</p>
       <span class="check dark"></span>
-      <img src="images/icon-cross.svg">
+      <img src="images/icon-cross.svg" alt="icon">
     </div>
       <div class="footList dark">
         <ul class="inforList">

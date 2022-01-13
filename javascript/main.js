@@ -163,7 +163,7 @@ document.querySelector(".container .header img").addEventListener("click", funct
         document.body.style.setProperty("--Very-Light-Grayish-Blue", "hsl(235, 21%, 11%)");
         document.body.style.setProperty("--Light-Grayish-Blue", "hsl(233, 11%, 84%)");
         document.body.style.setProperty("--Dark-Grayish-Blue", "hsl(234, 11%, 52%)");
-        document.body.style.setProperty("--Bright-Blue", "hsl(220, 98%, 61%)");
+        // document.body.style.setProperty("--Bright-Blue", "hsl(220, 98%, 61%)");
         document.body.style.setProperty("--dark-para-color","white");
         spans.forEach((ele) => {ele.classList.add("dark");});
         boxsList.forEach((ele) => {ele.classList.add("dark");});
@@ -178,7 +178,7 @@ document.querySelector(".container .header img").addEventListener("click", funct
         document.body.style.setProperty("--Very-Light-Grayish-Blue", "hsl(236, 33%, 92%)");
         document.body.style.setProperty("--Light-Grayish-Blue", "hsl(233, 11%, 84%)");
         document.body.style.setProperty("--Dark-Grayish-Blue", "hsl(236, 9%, 61%)");
-        document.body.style.setProperty("--Bright-Blue", "hsl(220, 98%, 61%)");
+        // document.body.style.setProperty("--Bright-Blue", "hsl(220, 98%, 61%)");
         document.body.style.setProperty("--dark-para-color","hsl(235, 21%, 11%)");
         spans.forEach((ele) => {ele.classList.remove("dark");});
         boxsList.forEach((ele) => {ele.classList.remove("dark");});
@@ -186,15 +186,3 @@ document.querySelector(".container .header img").addEventListener("click", funct
         document.querySelector(".container form .listItems .footList").classList.remove("dark");
     }
 });
-
-        // document.body.style.setProperty("--Very-Light-Gray", "hsl(235, 24%, 19%)");
-        // document.body.style.setProperty("--Very-Dark-Grayish-Blue", "hsl(236, 33%, 92%)");
-        // document.body.style.setProperty("--Very-Light-Grayish-Blue", "hsl(235, 21%, 11%)");
-        // document.body.style.setProperty("--Light-Grayish-Blue", "hsl(233, 11%, 84%)");
-        // document.body.style.setProperty("--Dark-Grayish-Blue", "hsl(234, 11%, 52%)");
-        // document.body.style.setProperty("--Bright-Blue", "hsl(220, 98%, 61%)");
-        // document.body.style.setProperty("--dark-para-color","white");
-// delegation in javscript
-// document.addEventListener("click", function(event) {
-//     console.log(event);
-// });
